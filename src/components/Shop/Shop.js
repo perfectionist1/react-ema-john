@@ -23,7 +23,7 @@ const Shop = () => {
                 <h2>Products: {products.length}</h2>
                 <ul>
                     {
-                        products.map(pd => <Product product={pd} handleCart={handleCart}></Product>)
+                        products.map(pd => <Product showAddToCart={true} product={pd} handleCart={handleCart}></Product>)
                     }
                 </ul>
             </div>
