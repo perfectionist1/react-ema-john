@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-const Product = (props) => {
+const Product = ({product, handleCart}) => {
     //console.log(props);
-    const {product, handleCart} = props;
+    //const {product, handleCart} = props;
     const { img, name, seller, price, stock, key} = product;
 
     return (
