@@ -21,7 +21,7 @@ function App() {
       <Header></Header>
       <Router>
         <Switch>
-          <Route exact path="/shop">            
+          <Route path="/shop">            
             <Shop></Shop> 
           </Route>
           <Route path="/review">
@@ -33,7 +33,7 @@ function App() {
           <Route exact path="/">
             <Shop></Shop>
           </Route>
-          <Route path="/product/:productKey">
+          <Route path="/product/productKey">
             <ProductDetail></ProductDetail>
           </Route>
           <Route path="*">
