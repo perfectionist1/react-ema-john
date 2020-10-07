@@ -1,0 +1,9 @@
+.login-style{
+    text-align: center;
+    border: 2px solid darksalmon;
+    border-radius: 20px;
+    width: 50%;
+    margin: 30px auto 0;
+    padding: 20px;
+
+}

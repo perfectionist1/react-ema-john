@@ -1,23 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Header from './components/Header/Header';
 import Shop from './components/Shop/Shop';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Review from './components/Review/Review';
 import Inventory from './components/Inventory/Inventory';
 import NotFound from './components/NotFound/NotFound';
 import ProductDetail from './components/ProductDetail/ProductDetail';
+import Shipment from './components/Products/Shipment/shipment';
+import Login from './components/Login/Login';
+import { createContext } from 'react';
+import { useState } from 'react';
 
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <div >
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <h2>Logged In User: {loggedInUser.email}</h2>
       <Header></Header>
       <Router>
         <Switch>
@@ -29,6 +33,12 @@ function App() {
           </Route>
           <Route path="/manage">
             <Inventory></Inventory>
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/shipment">
+            <Shipment />
           </Route>
           <Route exact path="/">
             <Shop></Shop>
@@ -43,7 +53,7 @@ function App() {
       </Router>
      
            
-    </div>
+    </UserContext.Provider>
   );
 }
 
