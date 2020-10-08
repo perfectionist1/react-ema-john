@@ -10,7 +10,7 @@ import Review from './components/Review/Review';
 import Inventory from './components/Inventory/Inventory';
 import NotFound from './components/NotFound/NotFound';
 import ProductDetail from './components/ProductDetail/ProductDetail';
-import Shipment from './components/Products/Shipment/shipment';
+import Shipment from './components/Products/Shipment/Shipment';
 import Login from './components/Login/Login';
 import { createContext } from 'react';
 import { useState } from 'react';
