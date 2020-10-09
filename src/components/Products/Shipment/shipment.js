@@ -20,11 +20,20 @@ const Shipment = () => {
         <input name="email" defaultValue={loggedInUser.email} ref={register({ required: true })} placeholder="Your email" />
         {errors.email && <span className="error">Email is required</span>}
 
-        <input name="phone" ref={register({ required: true })} placeholder="Your Phone" />
-        {errors.phone && <span className="error">Phone is required</span>}
+        <input name="address1" ref={register({ required: true })} placeholder="Address Line 1" />
+        {errors.address1 && <span className="error">Phone is required</span>}
 
-        <input name="address" ref={register({ required: true })}placeholder="Your Address" />
+        <input name="address2" ref={register({ required: false })}placeholder="Address Line 2" />
         {errors.address && <span className="error">Address is required</span>}
+
+        <input name="city"  ref={register({ required: true })} placeholder="City" />
+        {errors.city && <span className="error">City is required</span>}
+
+        <input name="country"  ref={register({ required: true })} placeholder="Country" />
+        {errors.country && <span className="error">Country is required</span>}
+
+        <input name="zip"  ref={register({ required: true })} placeholder="zip" />
+        {errors.zip && <span className="error">Zip is required</span>}
      
         <input type="submit" />
         </form>
